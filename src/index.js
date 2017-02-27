@@ -14,7 +14,7 @@
  *
  * Examples:
  * One-shot model:
- *  User: "Alexa, ask Space Geek for a space fact"
+ *  User: "Alexa, ask Initial D Geek for a space fact"
  *  Alexa: "Here's your space fact: ..."
  */
 
@@ -27,19 +27,33 @@ var APP_ID = "amzn1.ask.skill.1b50aa3d-2078-4a88-ad1e-d4b8ee269089"; //OPTIONAL:
  * Array containing space facts.
  */
 var FACTS = [
-    "A year on Mercury is just 88 days long.",
-    "Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.",
-    "Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.",
-    "On Mars, the Sun appears about half the size as it does on Earth.",
-    "Earth is the only planet not named after a god.",
-    "Jupiter has the shortest day of all the planets.",
-    "The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.",
-    "The Sun contains 99.86% of the mass in the Solar System.",
-    "The Sun is an almost perfect sphere.",
-    "A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.",
-    "Saturn radiates two and a half times more energy into space than it receives from the sun.",
-    "The temperature inside the Sun can reach 15 million degrees Celsius.",
-    "The Moon is moving approximately 3.8 cm away from our planet every year."
+    "It was written and illustrated by Shuichi Shigeno, originally as a comic book, from 1995 to 2013.",
+    "It is a manga series.  Manga are comics created in Japan or by their creators in the Japanese language, conforming to a style developed in Japan in the late nineteenth century.",
+    "Although some of the names of the locations the characters race in have been fictionalized, all of the locations in the series are based on actual locations in Japan.",
+    "Initial D was originally published in Young magazine, a weekly manga magazine that generally includes violent, sexy and action-oriented concurrent stories.",
+    "Initial D has been adapted into a television anime series, anime movie and a live action film.",
+    "Takumi started delivering tofu each morning since the seventh grade, five years prior to the start of the series.",
+    "The Toyota Trueno AE Eight Six was originally known as the Ghost of Akina.",
+    "Mount Akina, home of the Akina Speed Stars is not real.  It is based off of Mount Haruna and can be found on the northern border of Gunma prefecture between Seibu and Chubu",
+    "Mount Akagi, the home of the Red Suns is real. It is actually a volcano, although it is not considered active or likely to ever be active. reports of activity in 1938 are disputed.",
+    "Mount Miyogi, home of the Night Kids is a real mountain.",
+    "Takumi Fujiwara is voiced by two different people in the english versions.  Dave Wittenberg voiced the Tokoypop production and Joel McDonal voiced the Funimation production.",
+    "The first Initial D manga volume was released on November six, nineteen-ninety-five and concluded it's production run on July twenty-nine, two-thousand-thirteen.",
+    "Initial D Manga was officially translated into Chinese, French and English during it's production run.",
+    "The first Initial D anime episode premiered on Fuji TV on April eight, nineteen-ninety-eight.",
+    "It took over sixteen years for all of the anime adaptations of Initial D to be aired, most on a pay-per-view basis.",
+    "Both funimation and tokyopop changed the soundtracks of the original Japanese anime productions, to better suit the american audience and try to be aired on television.",
+    "A live action film adaptation of Intial D was released on June twenty-third, two-thousand and five to mixed reviews.  A sequel has been rumored for several years but no official announcements as of two-thousand-seventeen.",
+    "The Toyota AE eight-six was produced from ninteen-eighty-three to nineteen-eighty-seven in two major configurations, the Corolla Levin and the Sprinter Trueno.",
+    "The chassis code AE eight-six depicts the rear wheel drive sixteen-hundred CC model, with the A representing the four A engine code, the E representing the corolla, the eight representing the fifth generation and the six represents the varion within its generation.",
+    "The AE eight-six came in both a two door coupe and 3 door hatchback.",
+    "The AE eight-six originally had three different engine options, all of them a variation of a one-point-six liter, four cylinder engine.",
+    "Trueno is Spanish for thunder.",
+    "Levin is middle-english for lightning",
+    "The Sprinter Trueno was exclusively sold new to Toyota dealerships called Toyota Vista Stores.",
+    "The four-A-G-E engine used in the AE eight six car was also used in the Toyota MR two, Toyota Celica GT-R and GT Carina.",
+    "The author of Initial D also is behind Shakotan Boogie and Wangan Midnight, which are also motorsport focused manga series.",
+    "Impact Blue driver, Majo Sato drives a sil-eighty, which is a Nissan one-eighty-es-ex with a Nissan Silvia's headlights, front fenders, hood and front bumper.  So a combination of a Silvia and a One-eighty-es-ex."
 ];
 
 /**
@@ -48,7 +62,7 @@ var FACTS = [
 var AlexaSkill = require('./AlexaSkill');
 
 /**
- * SpaceGeek is a child of AlexaSkill.
+ * Initial D Geek is a child of AlexaSkill.
  * To read more about inheritance in JavaScript, see the link below.
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
@@ -85,7 +99,7 @@ Fact.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        response.ask("You can say tell me a space fact, or, you can say exit... What can I help you with?", "What can I help you with?");
+        response.ask("You can say tell me an Initial D fact, or, you can say exit... What can I help you with?", "What can I help you with?");
     },
 
     "AMAZON.StopIntent": function (intent, session, response) {
